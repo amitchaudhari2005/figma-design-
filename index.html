@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertex Technologies | Pioneering the Future of Tech | 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366F1',
+                        secondary: '#10B981',
+                        dark: '#111827',
+                        light: '#F9FAFB',
+                        accent: '#8B5CF6',
+                        neon: '#22D3EE',
+                        rose: '#F43F5E',
+                        amber: '#F59E0B',
+                        teal: '#14B8A6'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        alt: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .neon-text {
+            color: #22D3EE;
+            text-shadow: 0 0 5px rgba(34, 211, 238, 0.5), 0 0 10px rgba(34, 211, 238, 0.3);
+        }
+        
+        .rose-text {
+            color: #F43F5E;
+            text-shadow: 0 0 5px rgba(244, 63, 94, 0.5), 0 0 10px rgba(244, 63, 94, 0.3);
+        }
+        
+        .amber-text {
+            color: #F59E0B;
+            text-shadow: 0 0 5px rgba(245, 158, 11, 0.5), 0 0 10px rgba(245, 158, 11, 0.3);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .company-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .vertical-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .vertical-card-content {
+            flex-grow: 1;
+        }
+        
+        .leadership-card {
+            overflow: hidden;
+        }
+        
+        .leadership-card img {
+            transition: transform 0.5s ease;
+        }
+        
+        .leadership-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background: #E5E7EB;
+            overflow: hidden;
+        }
+        
+        .progress-value {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #6366F1 0%, #8B5CF6 100%);
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .float-animation {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .chat-bubble {
+            position: relative;
+        }
+        
+        .chat-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 20px;
+            border-width: 10px 10px 0;
+            border-style: solid;
+            border-color: currentColor transparent;
+        }
+        
+        .glow {
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.5), 0 0 30px rgba(139, 92, 246, 0.3);
+        }
+        
+        .glow-neon {
+            box-shadow: 0 0 15px rgba(34, 211, 238, 0.5), 0 0 30px rgba(34, 211, 238, 0.3);
+        }
+        
+        .glow-rose {
+            box-shadow: 0 0 15px rgba(244, 63, 94, 0.5), 0 0 30px rgba(244, 63, 94, 0.3);
+        }
+        
+        .glow-amber {
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.5), 0 0 30px rgba(245, 158, 11, 0.3);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tech-pattern {
+            background-image: radial-gradient(circle at 1px 1px, rgba(99, 102, 241, 0.15) 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+        
+        .hexagon {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+        
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.8;
+            }
+            80%, 100% {
+                opacity: 0;
+                transform: scale(2);
+            }
+        }
+        
+        @keyframes pulse-dot {
+            0% {
+                transform: scale(0.8);
+            }
+            50% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(0.8);
+            }
+        }
+        
+        .pulse-ring {
+            animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+        
+        .pulse-dot {
+            animation: pulse-dot 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+        }
+        
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        .tech-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+        }
+        
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(99, 102, 241, 0.5);
+            animation: float 4s infinite ease-in-out;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .rotate-slow {
+            animation: rotate 20s linear infinite;
+        }
+        
+        .rotate-medium {
+            animation: rotate 15s linear infinite;
+        }
+        
+        .rotate-fast {
+            animation: rotate 10s linear infinite;
+        }
+        
+        .typing-indicator::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .data-stream {
+            position: absolute;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, #6366F1, transparent);
+            animation: dataStream 2s linear infinite;
+        }
+        
+        @keyframes dataStream {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+        
+        .hologram {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hologram::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom,
+                transparent 0%,
+                rgba(99, 102, 241, 0.1) 50%,
+                transparent 100%
+            );
+            animation: hologram 2s linear infinite;
+            transform: rotate(30deg);
+        }
+        
+        @keyframes hologram {
+            0% { transform: translateY(-100%) rotate(30deg); }
+            100% { transform: translateY(100%) rotate(30deg); }
+        }
+        
+        .ai-wave {
+            position: relative;
+        }
+        
+        .ai-wave::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #6366F1, #8B5CF6, #6366F1);
+            animation: aiWave 2s ease-in-out infinite;
+        }
+        
+        @keyframes aiWave {
+            0%, 100% { transform: scaleX(0.8); opacity: 0.5; }
+            50% { transform: scaleX(1); opacity: 1; }
+        }
+        
+        .quantum-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: #6366F1;
+            filter: blur(1px);
+            opacity: 0.7;
+        }
+        
+        .blob {
+            border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+            animation: morph 8s linear infinite;
+        }
+        
+        .blob-2 {
+            border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+            animation: morph 8s linear infinite;
+            animation-delay: 2s;
+        }
+        
+        .blob-3 {
+            border-radius: 31% 69% 57% 43% / 59% 59% 41% 41%;
+            animation: morph 8s linear infinite;
+            animation-delay: 4s;
+        }
+        
+        @keyframes morph {
+            0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
+            25% { border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%; }
+            50% { border-radius: 31% 69% 57% 43% / 59% 59% 41% 41%; }
+            75% { border-radius: 35% 65% 65% 35% / 48% 52% 48% 52%; }
+            100% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
+        }
+        
+        .gradient-border {
+            position: relative;
+            border-radius: 0.75rem;
+            background: linear-gradient(to right, #111827, #1F2937);
+        }
+        
+        .gradient-border::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            z-index: -1;
+            border-radius: 0.85rem;
+            background: linear-gradient(45deg, #6366F1, #8B5CF6, #22D3EE, #6366F1);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .shimmer {
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.2) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+                linear-gradient(to right, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .radial-gradient {
+            background: radial-gradient(circle at center, #6366F1 0%, #4F46E5 50%, #4338CA 100%);
+        }
+        
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 10px rgba(99, 102, 241, 0.5), 0 0 20px rgba(99, 102, 241, 0.3);
+        }
+        
+        .text-glow-white {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+        
+        .text-glow-neon {
+            text-shadow: 0 0 10px rgba(34, 211, 238, 0.5), 0 0 20px rgba(34, 211, 238, 0.3);
+        }
+        
+        .text-glow-rose {
+            text-shadow: 0 0 10px rgba(244, 63, 94, 0.5), 0 0 20px rgba(244, 63, 94, 0.3);
+        }
+        
+        .text-glow-amber {
+            text-shadow: 0 0 10px rgba(245, 158, 11, 0.5), 0 0 20px rgba(245, 158, 11, 0.3);
+        }
+        
+        .clip-path-slant {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        
+        .clip-path-wave {
+            clip-path: polygon(
+                0% 0%,
+                100% 0%,
+                100% 85%,
+                75% 90%,
+                50% 85%,
+                25% 90%,
+                0% 85%
+            );
+        }
+        
+        .clip-path-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+        }
+        
+        .clip-path-triangle {
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        }
+        
+        .clip-path-circle {
+            clip-path: circle(50% at 50% 50%);
+        }
+        
+        .clip-path-hexagon {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+        
+        .clip-path-diamond {
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+        
+        .clip-path-arrow {
+            clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+        }
+        
+        .clip-path-star {
+            clip-path: polygon(
+                50% 0%,
+                61% 35%,
+                98% 35%,
+                68% 57%,
+                79% 91%,
+                50% 70%,
+                21% 91%,
+                32% 57%,
+                2% 35%,
+                39% 35%
+            );
+        }
+        
+        .clip-path-message {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+        }
+        
+        .clip-path-bevel {
+            clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+        }
+        
+        .clip-path-rabbet {
+            clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+        }
+        
+        .clip-path-frame {
+            clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+        }
+        
+        .clip-path-cross {
+            clip-path: polygon(35% 0%, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0% 65%, 0% 35%, 35% 35%);
+        }
+        
+        .clip-path-chevron {
+            clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+        }
+        
+        .clip-path-tag {
+            clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+        }
+        
+        .clip-path-rhombus {
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+        
+        .clip-path-parallelogram {
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        }
+        
+        .clip-path-plus {
+            clip-path: polygon(35% 0%, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0% 65%, 0% 35%, 35% 35%);
+        }
+        
+        .clip-path-pentagon {
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+        }
+        
+        .clip-path-heptagon {
+            clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+        }
+        
+        .clip-path-octagon {
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+        }
+        
+        .clip-path-nonagon {
+            clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+        }
+        
+        .clip-path-decagon {
+            clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+        }
+        
+        .clip-path-bevel-corners {
+            clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+        }
+        
+        .clip-path-message-square {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+        }
+        
+        .clip-path-message-circle {
+            clip-path: path('M 0 0 L 100 0 L 100 75 A 25 25 0 0 1 75 100 L 75 100 L 75 75 L 50 100 L 25 75 L 0 75 Z');
+        }
+        
+        .clip-path-trapezoid {
+            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+        }
+        
+        .clip-path-parallelogram-skew {
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        }
+        
+        .clip-path-triangle-isosceles {
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        }
+        
+        .clip-path-triangle-right {
+            clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+        }
+        
+        .clip-path-triangle-equilateral {
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        }
+        
+        .clip-path-kite {
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+        
+        .clip-path-chevron-up {
+            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+        }
+        
+        .clip-path-chevron-down {
+            clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+        }
+        
+        .clip-path-chevron-left {
+            clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
+        }
+        
+        .clip-path-chevron-right {
+            clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+        }
+        
+        .clip-path-arrow-up {
+            clip-path: polygon(0% 80%, 30% 80%, 30% 100%, 70% 100%, 70% 80%, 100% 80%, 50% 0%);
+        }
+        
+        .clip-path-arrow-down {
+            clip-path: polygon(0% 20%, 30% 20%, 30% 0%, 70% 0%, 70% 20%, 100% 20%, 50% 100%);
+        }
+        
+        .clip-path-arrow-left {
+            clip-path: polygon(80% 0%, 80% 30%, 100% 30%, 100% 70%, 80% 70%, 80% 100%, 0% 50%);
+        }
+        
+        .clip-path-arrow-right {
+            clip-path: polygon(20% 0%, 20% 30%, 0% 30%, 0% 70%, 20% 70%, 20% 100%, 100% 50%);
+        }
+        
+        .clip-path-star-5 {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+        
+        .clip-path-star-6 {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+        
+        .clip-path-star-8 {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+        
+        .clip-path-burst-8 {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+        
+        .clip-path-burst-12 {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+        
+        .clip-path-circle-top-left {
+            clip-path: circle(50% at 0% 0%);
+        }
+        
+        .clip-path-circle-top-right {
+            clip-path: circle(50% at 100% 0%);
+        }
+        
+        .clip-path-circle-bottom-left {
+            clip-path: circle(50% at 0% 100%);
+        }
+        
+        .clip-path-circle-bottom-right {
+            clip-path: circle(50% at 100% 100%);
+        }
+        
+        .clip-path-ellipse-horizontal {
+            clip-path: ellipse(50% 25% at 50% 50%);
+        }
+        
+        .clip-path-ellipse-vertical {
+            clip-path: ellipse(25% 50% at 50% 50%);
+        }
+        
+        .clip-path-ellipse-top-left {
+            clip-path: ellipse(50% 50% at 0% 0%);
+        }
+        
+        .clip-path-ellipse-top-right {
+            clip-path: ellipse(50% 50% at 100% 0%);
+        }
+        
+        .clip-path-ellipse-bottom-left {
+            clip-path: ellipse(50% 50% at 0% 100%);
+        }
+        
+        .clip-path-ellipse-bottom-right {
+            clip-path: ellipse(50% 50% at 100% 100%);
+        }
+        
+        .clip-path-inset {
+            clip-path: inset(10% 20% 30% 40%);
+        }
+        
+        .clip-path-inset-round {
+            clip-path: inset(10% 20% 30% 40% round 10px);
+        }
+        
+        .clip-path-inset-round-percent {
+            clip-path: inset(10% 20% 30% 40% round 10%);
+        }
+        
+        .clip-path-inset-round-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px);
+        }
+        
+        .clip-path-inset-round-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40%);
+        }
+        
+        .clip-path-inset-round-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40%);
+        }
+        
+        .clip-path-inset-round-mixed-corners {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-units {
+            clip-path: inset(10% 20% 30% 40% round 10px 20% 30px 40% / 40px 30% 20px 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed {
+            clip-path: inset(10% 20% 30% 40% round 10px 20px 30px 40px / 40px 30px 20px 10px);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-mixed-percent {
+            clip-path: inset(10% 20% 30% 40% round 10% 20% 30% 40% / 40% 30% 20% 10%);
+        }
+        
+        .clip-path-inset-round-mixed-corners-mixed-mixed-mixed-mixed-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96984226448329ed',t:'MTc1NDI0OTcyOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
